@@ -73,7 +73,11 @@ function displayFriends() {
                 mushroomCount--;
                 displayFriends();
                 displayMushrooms();
+            } else if 
+            (mushroomCount === 0) {
+                alert('no mushrooms left, go look for more!');
             }
+
             
         
         //         and if the friend's satisfaction level is below 3 and you have mushrooms left
