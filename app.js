@@ -53,15 +53,18 @@ addFriendButton.addEventListener('click', () => {
     // reset the input
     friendInputEl.value = '';
     // display all the friends (use a function here)
-    
+    displayFriends();
+
 });
 
 function displayFriends() {
     // clear out the friends in DOM
-
+    friendsEl.textContent = '';
     // for each friend in state . . .
     for (let friend of friendData) {
         // use renderFriend to make a friendEl
+        const friendEl = renderFriend(friend);
+        friendsEl.append(friendEl);
 
         // this is a clickable list, so . . .
         //     add an event listener to each friend
